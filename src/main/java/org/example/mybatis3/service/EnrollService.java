@@ -1,6 +1,8 @@
 package org.example.mybatis3.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.mybatis3.dto.CourseWithStudentsDTO;
+import org.example.mybatis3.dto.StudentWithCoursesDTO;
 import org.example.mybatis3.entity.Course;
 import org.example.mybatis3.entity.Student;
 import org.example.mybatis3.mapper.EnrollMapper;
@@ -27,5 +29,17 @@ public class EnrollService {
 
     public List<Course> findAllCourses() {
         return enrollMapper.findAllCourses();
+    }
+
+    public void createEnrollment(Student student, Course course) {
+        enrollMapper.insertEnrollment(student, course);
+    }
+
+    public List<StudentWithCoursesDTO> findAllStudentsWithCourses() {
+        return enrollMapper.findAllStudentsWithCourses();
+    }
+
+    public List<CourseWithStudentsDTO> findAllCoursesWithStudents() {
+        return enrollMapper.findAllCoursesWithStudents();
     }
 }
