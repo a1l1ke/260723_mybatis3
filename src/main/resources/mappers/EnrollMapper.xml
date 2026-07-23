@@ -54,7 +54,7 @@
     <resultMap id="courseWithStudentsResultMap" type="org.example.mybatis3.dto.CourseWithStudentsDTO">
         <id property="id" column="course_id"/>
         <result property="name" column="course_name"/>
-        <collection property="courses" ofType="org.example.mybatis3.entity.Student">
+        <collection property="students" ofType="org.example.mybatis3.entity.Student">
             <id property="id" column="student_id"/>
             <result property="name" column="student_name"/>
         </collection>

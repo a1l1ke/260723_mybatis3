@@ -20,8 +20,8 @@
 </section>
 <section>
     <form method="post" action="/enrollments">
-        <input name="student_id" type="number" placeholder="학생번호">
-        <input name="course_id" type="number" placeholder="과목번호">
+        <input name="studentId" type="number" placeholder="학생번호">
+        <input name="courseId" type="number" placeholder="과목번호">
         <button>생성</button>
     </form>
 </section>
